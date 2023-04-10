@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="test" method="post" action="input1.php">
+        <label>
+            Текстовое поле в одну строчку:
+            <input type="text" size="40">
+        </label>
+
+        <fieldset>
+            Радиокнопки:
+            <label class="radio-label">
+                <input type="radio" name="browser" value="ie" id="ie">
+                Вариант 1
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="browser" value="opera" id="opera">
+                Вариант 2
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="browser" value="firefox" id="firefox">
+                Вариант 3
+            </label>
+        </fieldset>
+
+        <label>
+            Большое текстовое поле:
+            <textarea name="comment" cols="40" rows="3"></textarea>
+        </label>
+
+        <div>
+            <input type="reset" value="Очистить">
+            <input type="submit" value="Отправить">
+        </div>
+    </form>
+
+
+    <script src="./assets/scripts/index.js"></script>
+</body>
+
+</html>
