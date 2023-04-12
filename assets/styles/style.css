@@ -1,0 +1,16 @@
+body {
+    padding: 50px;
+    background-color: #18191C;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2 {
+    color: #a06801;
+}
+
+label {
+    color: #737d88;
+}

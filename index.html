@@ -5,45 +5,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/style.css">
     <title>Document</title>
 </head>
 
 <body>
+    <h1>Калькулятор расчета стоимости автомобиля</h1>
     <form name="test" method="post" action="input1.php">
-        <label>
-            Текстовое поле в одну строчку:
-            <input type="text" size="40">
-        </label>
-
         <fieldset>
-            Радиокнопки:
-            <label class="radio-label">
-                <input type="radio" name="browser" value="ie" id="ie">
-                Вариант 1
-            </label>
-            <label class="radio-label">
-                <input type="radio" name="browser" value="opera" id="opera">
-                Вариант 2
-            </label>
-            <label class="radio-label">
-                <input type="radio" name="browser" value="firefox" id="firefox">
-                Вариант 3
+            <label for="car-name">
+                <h2>Марка автомобиля:</h2>
+                <select id="car-name">
+                    <option value="reno" name="car-name" selected>Reno</option>
+                    <option value="opel" name="car-name">Opel</option>
+                    <option value="mazda" name="car-name">Mazda</option>
+                    <option value="nissan" name="car-name">Nissan</option>
+                </select>
             </label>
         </fieldset>
 
-        <label>
-            Большое текстовое поле:
-            <textarea name="comment" cols="40" rows="3"></textarea>
-        </label>
+        <fieldset class="car-set">
+            <label class="car-label" for="car-model">
+                <h2>Модель автомобиля:</h2>
+                <select id="car-model">
+                    <option value="sentra/sylphy" name="car-model">Sentra/Sylphy</option>
+                    <option value="logan" name="car-model">Logan</option>
+                    <option value="astra" name="car-model">Astra</option>
+                    <option value="cx-9" name="car-model">CX-9</option>
+                </select>
+            </label>
+        </fieldset>
 
-        <div>
-            <input type="reset" value="Очистить">
-            <input type="submit" value="Отправить">
-        </div>
-    </form>
+        <fieldset class="radio-set">
+            <h2>Тип топлива:</h2>
+            <div class="radio-container">
+                <label class="radio-label">
+                    <input type="radio" name="type_of_fuel" checked>Бензин</label>
+                <label class="radio-label">
+                    <input type="radio" name="type_of_fuel">Дизель</label>
+                <label class="radio-label">
+                    <input type="radio" name="type_of_fuel">Газ</label>
+                <label class="radio-label">
+                    <input type="radio" name="type_of_fuel">Электричество</label>
+            </div>
+        </fieldset>
 
+        <fieldset class="input-set">
+            <label class="input-label">
+                <h2>Объем двигателя:</h2>
+                <input type="text" class="input" placeholder="от 1.1 литра до 3.5 литров" size="40">
+            </label>
+        </fieldset>
 
-    <script src="./assets/scripts/index.js"></script>
+        <fieldset class="checkbox-set">
+            <h2>Состояние автомобиля:</h2>
+            <label class="checkbox-label">
+                <input type="checkbox" name="car-condition" checked>Новый</label>
+            <label class="checkbox-label">
+                <input type="checkbox" name="car-condition">Подержанный</label>
+        </fieldset>
+
+        <fieldset class="owner-set">
+            <h2>Количество владельцев:</h2>
+            <label class="owner-label">
+                <input type="checkbox" name="car-owner" checked>1-2 владельца</label>
+            <label class="checkbox-label">
+                <input type="checkbox" name="car-owner">больше 3 владельцев</label>
+        </fieldset>
+
+        <fieldset class="pay-set">
+            <h2>Способ оплаты:</h2>
+            <div class="pay-container">
+                <label class="pay-label">
+                    <input type="radio" name="pay-input" checked>Карта</label>
+                <label class="pay-label">
+                    <input type="radio" name="pay-input">Наличные</label>
+                <label class="pay-label">
+                    <input type="radio" name="pay-input">Счет на юр.лицо</label>
+            </div>
+        </fieldset>
+
+        <script src="./assets/scripts/index.js">
+        </script>
 </body>
 
 </html>
