@@ -13,25 +13,22 @@
     <h1>Калькулятор расчета стоимости автомобиля</h1>
     <form name="test" method="post" action="input1.php">
         <fieldset>
-            <label for="car-name">
+            <label for="car-brand">
                 <h2>Марка автомобиля:</h2>
-                <select id="car-name">
-                    <option value="reno" name="car-name" selected>Reno</option>
-                    <option value="opel" name="car-name">Opel</option>
-                    <option value="mazda" name="car-name">Mazda</option>
-                    <option value="nissan" name="car-name">Nissan</option>
-                </select>
             </label>
+            <select id="car-brand">
+                <option value="reno" name="car-name" selected>Reno</option>
+                <option value="opel" name="car-name">Opel</option>
+                <option value="mazda" name="car-name">Mazda</option>
+                <option value="jaguar" name="car-name">Jaguar</option>
+            </select>
+
         </fieldset>
 
         <fieldset class="car-set">
             <label class="car-label" for="car-model">
                 <h2>Модель автомобиля:</h2>
                 <select id="car-model">
-                    <option value="sentra/sylphy" name="car-model">Sentra/Sylphy</option>
-                    <option value="logan" name="car-model">Logan</option>
-                    <option value="astra" name="car-model">Astra</option>
-                    <option value="cx-9" name="car-model">CX-9</option>
                 </select>
             </label>
         </fieldset>
@@ -40,53 +37,61 @@
             <h2>Тип топлива:</h2>
             <div class="radio-container">
                 <label class="radio-label">
-                    <input type="radio" name="type_of_fuel" checked>Бензин</label>
+                    <input type="radio" value="Бензин" name="car-fuel" checked>Бензин</label>
                 <label class="radio-label">
-                    <input type="radio" name="type_of_fuel">Дизель</label>
+                    <input type="radio" value="Дизель" name="car-fuel">Дизель</label>
                 <label class="radio-label">
-                    <input type="radio" name="type_of_fuel">Газ</label>
+                    <input type="radio" value="Газ" name="car-fuel">Газ</label>
                 <label class="radio-label">
-                    <input type="radio" name="type_of_fuel">Электричество</label>
+                    <input type="radio" value="Электричество" name="car-fuel">Электричество</label>
             </div>
         </fieldset>
 
         <fieldset class="input-set">
             <label class="input-label">
                 <h2>Объем двигателя:</h2>
-                <input type="text" class="input" placeholder="от 1.1 литра до 3.5 литров" size="40">
             </label>
+            <input type="number" id="car-engine" class="input-text" placeholder="от 1.1 литра до 3.5 литров" size="30"
+                required>
+            <p id="engine-error">ENter correct data</p>
         </fieldset>
 
         <fieldset class="checkbox-set">
             <h2>Состояние автомобиля:</h2>
             <label class="checkbox-label">
-                <input type="checkbox" name="car-condition" checked>Новый</label>
+                <input type="radio" id="car-new" value="new" name="car-condition" checked>Новый</label>
             <label class="checkbox-label">
-                <input type="checkbox" name="car-condition">Подержанный</label>
+                <input type="radio" id="car-used" value="used" name="car-condition">Подержанный</label>
         </fieldset>
 
-        <fieldset class="owner-set">
+        <fieldset class="owner-set" id="car-owner">
             <h2>Количество владельцев:</h2>
             <label class="owner-label">
-                <input type="checkbox" name="car-owner" checked>1-2 владельца</label>
+                <input type="radio" value="less" name="car-owner" checked>1-2 владельца</label>
             <label class="checkbox-label">
-                <input type="checkbox" name="car-owner">больше 3 владельцев</label>
+                <input type="radio" value="more" name="car-owner">больше 3 владельцев</label>
         </fieldset>
 
         <fieldset class="pay-set">
             <h2>Способ оплаты:</h2>
             <div class="pay-container">
                 <label class="pay-label">
-                    <input type="radio" name="pay-input" checked>Карта</label>
+                    <input type="radio" id="car-payment" name="pay-input" checked>Карта</label>
                 <label class="pay-label">
-                    <input type="radio" name="pay-input">Наличные</label>
+                    <input type="radio" id="car-payment" name="pay-input">Наличные</label>
                 <label class="pay-label">
-                    <input type="radio" name="pay-input">Счет на юр.лицо</label>
+                    <input type="radio" id="car-payment" name="pay-input">Счет на юр.лицо</label>
             </div>
         </fieldset>
+        <button type="submit" id="submit-form">Расчитать</button>
 
-        <script src="./assets/scripts/index.js">
-        </script>
+    </form>
+    <div id="price">
+        <h3>Общая стоимость автомобиля</h3>
+        </p>
+    </div>
+    <script src="./assets/scripts/index.js">
+    </script>
 </body>
 
 </html>

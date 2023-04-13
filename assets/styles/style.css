@@ -14,3 +14,30 @@ h2 {
 label {
     color: #737d88;
 }
+
+button {
+    margin-top: 20px;
+    min-width: 210px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding: 8px 15px;
+    color: #000000;
+    background-color: #2E9AFF;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: inherit;
+    transition: background-color 0.2s linear;
+}
+
+select {
+    margin-bottom: 20px;
+}
+
+#car-owner,
+#engine-error {
+    display: none;
+}
+
+#price {
+    margin: 40px 40px;
+}
